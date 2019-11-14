@@ -11,8 +11,9 @@ class Person():
         self.hair_color = hair_color
         self.eye_color = eye_color
 
-    def description(self, first, last, age, hair_color, eye_color):
-        return f"{first} {last} is " + str(self.age) + f"years old. Their hair is {self.hair_color} and their eyes {self.eye_color}."
+    def description(self):
+        return f"{self.first} {self.last} is {str(self.age)} years old. Their hair is {self.hair_color} and their eyes are {self.eye_color}."
 
-    def birthday(self, age):
-        self.age = self.age + 1
+    def birthday(self):
+        self.age = int(self.age) + 1
+        return f"Happy Birthday! {self.first} {self.last} is now {self.age}!"
